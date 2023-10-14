@@ -1,0 +1,4 @@
+python-dotenv
+schedule
+pytgbot==4.9.1
+apscheduler
