@@ -10,6 +10,6 @@ def start_jobs(alpari, bot_api, latest_message_file_handler):
     scheduler.add_job(
         lambda: job_channel_add_message.start(
             alpari, bot_api, latest_message_file_handler),
-        trigger=CronTrigger.from_crontab('* * * * *')
+        trigger=CronTrigger.from_crontab('*/5 * * * *')
     )
     scheduler.start()
