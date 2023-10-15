@@ -4,7 +4,7 @@ from pytgbot import Bot
 class BotAPI:
     def __init__(self, bot_api_key, bot_chat_id):
         self.bot = Bot(bot_api_key)
-        self.chat = bot_chat_id
+        self.chat = int(bot_chat_id)
 
     def send_message(self, text, parse_mode="HTML"):
         result = self.bot.send_message(self.chat, text, parse_mode)
