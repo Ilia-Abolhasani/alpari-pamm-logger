@@ -4,6 +4,8 @@ load_dotenv()
 
 
 class Config:
+    alpari_email = os.getenv("alpari_email")
+    alpari_password = os.getenv("alpari_password")
     # main chanel bot
     bot_api_key = os.getenv("bot_api_key")
-    bot_chat_id = os.getenv("bot_chat_id")
+    channel_id = os.getenv("channel_id")

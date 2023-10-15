@@ -1,4 +1,5 @@
-def create_message():
-    text = ""
-    message = f"<b>{text}:</b>\n\n"
+def create_message(accounts):
+    message = ""
+    for name in accounts:
+        message += f"<b>{name}: {accounts[name]}</b> \n"
     return message
