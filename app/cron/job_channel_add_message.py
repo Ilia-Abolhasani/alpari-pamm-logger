@@ -1,8 +1,10 @@
+import time 
 from app.util.Message import create_message
 
 
 def start(alpari, bot_api, latest_message_file_handler):
     try:
+        time.sleep(10) # to make sure that the site refresh before fetch 
         accounts = alpari.get_acounts_list()
         message = create_message(accounts)
         latest_message = latest_message_file_handler.read()
